@@ -247,7 +247,13 @@ $firstArr = [
     ],
 
 ];
-echo count($firstArr);
+$b = count($firstArr);
+foreach ($firstArr as $key => $value) {
+    if (is_array($value)){
+        $b = $b + count($value);
+    }
+}
+echo $b;
 
 echo "\n";
 
