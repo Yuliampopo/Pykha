@@ -1,0 +1,23 @@
+{
+    "name": "yuliia/testik",
+    "description": "My_test",
+    "type": "project",
+    "license": "mit",
+    "autoload": {
+        "psr-4": {
+            "src\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Yulia"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "config": {
+        "optimize-autoloader": true,
+        "preffered-install": "dist",
+        "sort-packages": true
+    }
+}
