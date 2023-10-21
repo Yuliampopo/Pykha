@@ -7,11 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
-    'src\\Bag' => $baseDir . '/src/Bag.php',
-    'src\\Bam' => $baseDir . '/src/Bam.php',
-    'src\\Fee' => $baseDir . '/src/Fee.php',
-    'src\\Tre' => $baseDir . '/src/Tre.php',
-    'src\\Tri' => $baseDir . '/src/Tri.php',
-    'src\\Tro' => $baseDir . '/src/Tro.php',
-    'src\\Tryu' => $baseDir . '/src/Tryu.php',
+    'src\\Controllers\\About' => $baseDir . '/src/Controllers/About.php',
+    'src\\Controllers\\Gallery' => $baseDir . '/src/Controllers/Gallery.php',
+    'src\\Controllers\\Home' => $baseDir . '/src/Controllers/Home.php',
 );

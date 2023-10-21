@@ -2,7 +2,7 @@
     "name": "yuliia/testik",
     "description": "My_test",
     "type": "project",
-    "license": "mit",
+    "license": "mix",
     "autoload": {
         "psr-4": {
             "src\\": "src/"
