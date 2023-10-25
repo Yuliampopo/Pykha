@@ -1,16 +1,16 @@
 <?php
 namespace src\Controllers;
 
+use src\Core\Viewer;
+use src\Models\Users;
+
 class About
 {
 
     public function index(): void
     {
-        print_r("I am About");
+        $obj = new Users();
+        $data['data'] = $obj -> findALl();
+        Viewer::view("About", $data);
     }
-    public function pupa(): void
-    {
-        print_r("I am pupa");
-    }
-
 }

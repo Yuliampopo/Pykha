@@ -8,6 +8,11 @@ $baseDir = dirname($vendorDir);
 return array(
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
     'src\\Controllers\\About' => $baseDir . '/src/Controllers/About.php',
-    'src\\Controllers\\Gallery' => $baseDir . '/src/Controllers/Gallery.php',
+    'src\\Controllers\\Error' => $baseDir . '/src/Controllers/Error.php',
+    'src\\Controllers\\Gallery' => $baseDir . '/src/Controllers/Songs.php',
     'src\\Controllers\\Home' => $baseDir . '/src/Controllers/Home.php',
+    'src\\Core\\Router' => $baseDir . '/src/Core/Router.php',
+    'src\\Core\\Viewer' => $baseDir . '/src/Core/Viewer.php',
+    'src\\Models\\Songs' => $baseDir . '/src/Models/Songs.php',
+    'src\\Models\\Users' => $baseDir . '/src/Models/Users.php',
 );

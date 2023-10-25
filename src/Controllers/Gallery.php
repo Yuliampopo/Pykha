@@ -2,15 +2,17 @@
 
 namespace src\Controllers;
 
+use src\Core\Viewer;
+use src\Models\Songs;
+
 class Gallery
 {
 
     public function index(): void
     {
-        print_r("I am Gallery");
+        $obj = new Songs();
+        $data['data'] = $obj -> findALl();
+        Viewer::view("Gallery", $data);
     }
-    public function lupa(): void
-    {
-        print_r("I am lupa");
-    }
+
 }

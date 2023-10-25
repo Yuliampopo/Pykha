@@ -2,16 +2,18 @@
 
 namespace src\Controllers;
 
+use src\Core\Viewer;
+use src\Models\Users;
+
 class Error
 {
 
-    public function index()
+    public function index(): void
     {
-
-        header('HTTP/1.1 404 Not Found');
-        die ('404 Not Found');
-
-
+        $obj = new Users();
+        $data['data'] = $obj -> findALl();
+        Viewer::view("Error", $data);
     }
+
 
 }
