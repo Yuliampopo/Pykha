@@ -2,21 +2,15 @@
 
 namespace src\Models;
 
+use \PDO;
 class Users
 {
     public function findAll(): array
     {
-        return [0 =>['first_name' => 'testik',
-            'second_name' => 'testovich',
-            'login' => 'log',
-'email' => 'testik@gmaol.com'],
-1 => ['first_name' => 'testik',
-        'second_name' => 'testovich',
-        'login' => 'log',
-'email' => 'testik@gmaol.com'],
-2 => ['first_name' => 'testik',
-        'second_name' => 'testovich',
-        'login' => 'log',
-'email' => 'testik@gmaol.com']];
+        $dsn = 'mysql:host=localhost;dbname=Test_db';
+        $a = new PDO($dsn, 'root');
+        $b = $a->query('SELECT * FROM Users', PDO::FETCH_ASSOC);
+        var_dump($b->fetchAll());
+        return [];
     }
 }
