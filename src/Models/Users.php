@@ -10,7 +10,7 @@ class Users
         $dsn = 'mysql:host=localhost;dbname=Test_db';
         $a = new PDO($dsn, 'root');
         $b = $a->query('SELECT * FROM Users', PDO::FETCH_ASSOC);
-        var_dump($b->fetchAll());
-        return [];
+        //var_dump($b->fetchAll());
+        return $b->fetchAll();
     }
 }
