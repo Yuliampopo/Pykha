@@ -12,7 +12,27 @@ class Gallery
     {
         $obj = new Songs();
         $data['data'] = $obj -> findALl();
-        Viewer::view("Gallery", $data);
+        Viewer::view("Gallery/Index", $data);
+    }
+    public function create(){
+        $obj = new Songs();
+        $data['data'] = $obj -> findALl();
+        var_dump($_POST);
+        if (!empty($_POST)){
+            $obj = new Songs();
+            $obj->insert(array_filter($_POST));
+        }
+        Viewer::view("Gallery/create", $data);
+    }
+    public function update(){
+        $obj = new Songs();
+        $data['data'] = $obj -> findALl();
+        Viewer::view("Gallery/update", $data);
+    }
+    public function delete(){
+        $obj = new Songs();
+        $data['data'] = $obj -> findALl();
+        Viewer::view("Gallery/delete", $data);
     }
 
 }
