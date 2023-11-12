@@ -8,10 +8,11 @@
     </tr>
     <?php foreach ($data as $row) :?>
         <tr>
-            <td><?= $row['first_name']?></td>
-            <td><?= $row['second_name']?></td>
-            <td><?= $row['login']?></td>
-            <td><?= $row['email']?></td>
+            <?php foreach ($row as $sth) : ?>
+                <td><?= $sth ?></td>
+            <?php endforeach; ?>
+            <td><a href = '/home/update?id=<?= $row['id'] ?>'>Update</a></td>
+            <td><a href = '/home/delete?id=<?= $row['id'] ?>'>Delete</a></td>
         </tr>
     <?php endforeach; ?>
 </table>

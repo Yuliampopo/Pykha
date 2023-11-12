@@ -4,10 +4,10 @@ namespace src\Core;
 
 class Viewer
 {
-    public static function view(string $name, array $data = []): void
+    public static function view(string $view_name, array $data = []): void
     {
         extract($data);
-        include __DIR__ . "\\..\\..\\view\\" . $name . ".php";
+        include __DIR__ . "\\..\\..\\view\\" . $view_name . ".php";
 
     }
 }
