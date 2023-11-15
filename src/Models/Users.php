@@ -6,6 +6,7 @@ use \PDO;
 use src\Orm\Connector;
 use src\Orm\Delete;
 use src\Orm\Insert;
+use src\Orm\Select;
 use src\Orm\Update;
 use src\Orm\Where;
 
@@ -59,6 +60,17 @@ class Users
             return $delete->exec($this->table_name, Where::andWhere([['id', $condition, '=']]));
         }catch (\Exception $ex){
             var_dump('Error delete in Users model');
+            var_dump($ex->getMessage());
+        }
+        return false;
+    }
+    public function findAll1(): bool
+    {
+        try {
+            $select = new Select();
+            return $select->exec($this->table_name);
+        } catch (\Exception $ex) {
+            var_dump('Error in select from Users model');
             var_dump($ex->getMessage());
         }
         return false;
